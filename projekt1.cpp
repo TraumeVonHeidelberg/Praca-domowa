@@ -2,10 +2,6 @@
 
 using namespace std;
 
-#include <iostream>
-
-using namespace std;
-
 int factiorial(int a)
 {
     if(a==0)
@@ -17,34 +13,22 @@ int factiorial(int a)
 }
 
 int main() {
-    int a, b;
-    cout << "Podaj liczbe calkowita ";
-    cin >> a >> b;
+    int a;
     int wyjscie;
     do {
-        cout << endl;
-        cout << endl;
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
+        cout << "1. Silnia" << endl;
         cin >> wyjscie;
-    } while(wyjscie != 0);
-    return 0;
-}
 
+        if(wyjscie==1)
+        {
+            cout<<"Wpisz liczbe z ktorej zostanie policzona silnia: ";
+            cin>>a;
 
-int main() {
-    int a, b;
-    cout << "Podaj liczbe calkowita ";
-    cin >> a >> b;
-    int wyjscie;
-    do {
-        cout << endl;
-        cout << endl;
-        cout << "MENU" << endl;
-        cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
-        cout << "0. Wyjscie" << endl;
-        cin >> wyjscie;
+            cout<<"Wynik: "<<factiorial(a)<<endl;
+        }
     } while(wyjscie != 0);
     return 0;
 }
