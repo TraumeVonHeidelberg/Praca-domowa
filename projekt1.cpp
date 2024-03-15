@@ -2,6 +2,27 @@
 
 using namespace std;
 
+bool isPrimary(int a)
+{
+    // Liczby mniejsze niż 2 nie są pierwsze
+    if(a < 2)
+    {
+        return false;
+    }
+
+    for(int i = a - 1; i > 1; i--)
+    {
+        // Jeśli znajdziemy dzielnik, liczba nie jest pierwsza
+        if(a % i == 0)
+        {
+            return false;
+        }
+    }
+
+    // Jeśli nie znaleziono żadnego dzielnika, liczba jest pierwsza
+    return true;
+}
+
 int main() {
     int a, b;
     cout << "Podaj liczbe calkowita ";
